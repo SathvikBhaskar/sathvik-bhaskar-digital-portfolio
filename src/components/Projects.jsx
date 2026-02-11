@@ -69,21 +69,24 @@ const Projects = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 {section.projects.map((project, pi) => (
                   <AnimatedSection key={project.title} delay={si * 0.1 + pi * 0.1}>
-                    <div className="group p-6 rounded-xl bg-card border border-border hover-lift h-full flex flex-col">
-                      <div className="flex items-start justify-between mb-3">
-                        <h4 className="font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
+                    <div className="group p-8 rounded-2xl glass-card h-full flex flex-col relative overflow-hidden">
+                      {/* Hover Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                      <div className="flex items-start justify-between mb-4 relative z-10">
+                        <h4 className="text-xl font-heading font-bold text-foreground group-hover:text-primary transition-colors">
                           {project.title}
                         </h4>
-                        <ExternalLink size={16} className="text-muted-foreground mt-1 flex-shrink-0 ml-2" />
+                        <ExternalLink size={18} className="text-muted-foreground group-hover:text-accent transition-colors mt-1 flex-shrink-0 ml-2" />
                       </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                      <p className="text-base text-muted-foreground leading-relaxed mb-6 flex-1 relative z-10">
                         {project.description}
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 relative z-10">
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-1 text-[11px] font-body text-primary bg-primary/10 rounded-md"
+                            className="px-3 py-1 text-xs font-medium font-body text-primary-foreground bg-primary/20 border border-primary/20 rounded-full"
                           >
                             {tag}
                           </span>

@@ -22,14 +22,14 @@ const Contact = () => {
             <div className="space-y-6">
               <a
                 href="mailto:vodurisathvik@gmail.com"
-                className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover-lift group"
+                className="flex items-center gap-4 p-5 rounded-xl glass-card group hover:bg-white/5"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Mail size={18} className="text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Mail size={20} className="text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">Email</p>
-                  <p className="text-sm text-foreground group-hover:text-primary transition-colors">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Email</p>
+                  <p className="text-base text-foreground font-medium group-hover:text-primary transition-colors">
                     vodurisathvik@gmail.com
                   </p>
                 </div>
@@ -39,14 +39,14 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/sathvik-bhaskar/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover-lift group"
+                className="flex items-center gap-4 p-5 rounded-xl glass-card group hover:bg-white/5"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Linkedin size={18} className="text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Linkedin size={20} className="text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">LinkedIn</p>
-                  <p className="text-sm text-foreground group-hover:text-primary transition-colors">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">LinkedIn</p>
+                  <p className="text-base text-foreground font-medium group-hover:text-primary transition-colors">
                     Sathvik Bhaskar
                   </p>
                 </div>
@@ -56,26 +56,26 @@ const Contact = () => {
                 href="https://github.com/SathvikBhaskar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover-lift group"
+                className="flex items-center gap-4 p-5 rounded-xl glass-card group hover:bg-white/5"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Github size={18} className="text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Github size={20} className="text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">GitHub</p>
-                  <p className="text-sm text-foreground group-hover:text-primary transition-colors">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">GitHub</p>
+                  <p className="text-base text-foreground font-medium group-hover:text-primary transition-colors">
                     SathvikBhaskar
                   </p>
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <MapPin size={18} className="text-primary" />
+              <div className="flex items-center gap-4 p-5 rounded-xl glass-card">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <MapPin size={20} className="text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">Location</p>
-                  <p className="text-sm text-foreground">Chennai, India</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Location</p>
+                  <p className="text-base text-foreground font-medium">Chennai, India</p>
                 </div>
               </div>
             </div>
@@ -87,35 +87,35 @@ const Contact = () => {
                 e.preventDefault();
                 window.location.href = "mailto:vodurisathvik@gmail.com";
               }}
-              className="space-y-4"
+              className="space-y-5 p-8 rounded-2xl glass-card"
             >
               <div>
-                <label className="text-xs text-muted-foreground mb-1.5 block">Name</label>
+                <label className="text-xs font-medium text-muted-foreground mb-2 block uppercase tracking-wide">Name</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 rounded-lg bg-card border border-border text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all"
+                  className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all placeholder:text-muted-foreground/50"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1.5 block">Email</label>
+                <label className="text-xs font-medium text-muted-foreground mb-2 block uppercase tracking-wide">Email</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 rounded-lg bg-card border border-border text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all"
+                  className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all placeholder:text-muted-foreground/50"
                   placeholder="your@email.com"
                 />
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1.5 block">Message</label>
+                <label className="text-xs font-medium text-muted-foreground mb-2 block uppercase tracking-wide">Message</label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-card border border-border text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all resize-none placeholder:text-muted-foreground/50"
                   placeholder="Your message..."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-primary text-primary-foreground font-heading font-medium text-sm rounded-lg hover:opacity-90 transition-opacity"
+                className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading font-bold text-sm rounded-lg hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.5)] transition-all hover:-translate-y-0.5"
               >
                 Send Message
               </button>

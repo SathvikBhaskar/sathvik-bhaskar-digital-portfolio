@@ -29,7 +29,7 @@ const categories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="section-padding bg-secondary/20">
+    <section id="skills" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <span className="text-sm font-body tracking-widest uppercase text-primary mb-4 block">
@@ -43,15 +43,15 @@ const Skills = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
             <AnimatedSection key={cat.title} delay={i * 0.08}>
-              <div className="p-6 rounded-xl bg-card border border-border hover-lift h-full">
-                <h3 className="font-heading font-semibold text-sm text-primary mb-4 tracking-wide uppercase">
+              <div className="p-8 rounded-2xl glass-card h-full transition-all duration-300 hover:-translate-y-1">
+                <h3 className="font-heading font-bold text-lg text-primary mb-6 tracking-wide">
                   {cat.title}
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {cat.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1.5 text-xs font-body text-muted-foreground bg-secondary rounded-md border border-border"
+                      className="px-4 py-2 text-sm font-medium font-body text-foreground/80 bg-white/5 border border-white/10 rounded-lg hover:bg-primary/20 hover:border-primary/30 transition-colors cursor-default"
                     >
                       {skill}
                     </span>

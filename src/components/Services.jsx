@@ -21,7 +21,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="section-padding bg-secondary/20">
+    <section id="services" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <span className="text-sm font-body tracking-widest uppercase text-primary mb-4 block">
@@ -35,10 +35,12 @@ const Services = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <AnimatedSection key={service.title} delay={i * 0.1}>
-              <div className="p-8 rounded-xl bg-card border border-border hover-lift h-full">
-                <service.icon size={28} className="text-primary mb-5" />
-                <h3 className="font-heading font-semibold text-foreground mb-3">{service.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+              <div className="p-8 rounded-2xl glass-card h-full transition-all duration-300 hover:-translate-y-2">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                  <service.icon size={28} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-heading font-bold text-foreground mb-4">{service.title}</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
             </AnimatedSection>
           ))}
