@@ -58,36 +58,37 @@
     --foreground: 222.2 84% 4.9%;
     /* Deep slate - High contrast */
 
-    --card: 0 0% 100%;
+    --card: 210 40% 99%;
+    /* Very faint blue-white tint for cards */
     --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Optimized for Light Mode Visibility */
-    --primary: 262 80% 50%;
-    /* Darker, richer purple for better text contrast */
+    /* Optimized for Light Mode Visibility - ROYAL BLUE */
+    --primary: 221 83% 53%;
+    /* Vibrant Professional Blue (Tailwind Blue-600 ish) */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 90%;
-    /* Slightly darker muted background */
+    --muted: 210 20% 92%;
+    /* Darker muted background for visibility */
     --muted-foreground: 215 25% 40%;
     /* Darker gray for readable secondary text */
 
-    --accent: 175 80% 40%;
-    /* Darker Teal for better visibility on white */
+    --accent: 199 89% 48%;
+    /* Sky Blue Accent for freshness */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 85%;
-    /* Darker border for definition */
+    --border: 214.3 31.8% 82%;
+    /* Stronger border for definition */
     --input: 214.3 31.8% 85%;
-    --ring: 262 80% 50%;
+    --ring: 221 83% 53%;
   }
 }
 
@@ -98,6 +99,27 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased selection:bg-primary/20 selection:text-primary;
+  }
+
+  /* Light Mode: Subtle shifting background for "entertainment" */
+  .light body {
+    background: linear-gradient(-45deg, #f8fafc, #f0f9ff, #faf5ff, #fff1f2);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   h1,
@@ -135,14 +157,15 @@
 
   .glass-card {
     /* Light Mode: Tinted Gradient & Colored Border */
-    @apply backdrop-blur-md transition-all duration-500 bg-gradient-to-br from-white/90 to-indigo-50/60 border-indigo-100/50;
+    @apply backdrop-blur-md transition-all duration-500 bg-gradient-to-br from-white/90 to-blue-50/60 border-blue-100/50;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   }
 
   .glass-card:hover {
-    @apply border-indigo-200/60;
-    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.08);
-    /* Indigo tinted shadow */
+    @apply border-blue-400/50 -translate-y-2;
+    box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15);
+    /* Deep blue shadow */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(219, 234, 254, 0.8) 100%);
   }
 
   .dark .glass-card {

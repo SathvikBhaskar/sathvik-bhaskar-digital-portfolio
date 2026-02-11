@@ -51,7 +51,7 @@ const Skills = () => {
                   {cat.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-4 py-2 text-sm font-medium font-body text-foreground/80 bg-white/5 border border-white/10 rounded-lg hover:bg-primary/20 hover:border-primary/30 transition-colors cursor-default"
+                      className="px-4 py-2 text-sm font-medium font-body text-foreground/80 bg-secondary/50 dark:bg-white/5 border border-border dark:border-white/10 rounded-lg hover:bg-primary/20 hover:border-primary/30 transition-colors cursor-default"
                     >
                       {skill}
                     </span>

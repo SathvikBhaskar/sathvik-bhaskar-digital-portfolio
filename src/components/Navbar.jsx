@@ -32,8 +32,11 @@ const Navbar = () => {
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
-          <a href="#home" className="font-heading text-xl font-bold tracking-tight">
-            <span className="text-gradient">SB</span>
+          <a href="#home" className="font-heading text-xl font-bold tracking-tight flex items-center gap-2 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border border-white/10 flex items-center justify-center backdrop-blur-md group-hover:border-primary/50 transition-colors">
+              <span className="text-gradient font-bold text-lg">SB</span>
+            </div>
+            <span className="hidden md:block font-bold text-lg tracking-wide text-foreground/90 group-hover:text-primary transition-colors">SathvikBhaskar</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
