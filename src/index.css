@@ -214,3 +214,76 @@
     @apply bg-muted rounded-full hover:bg-muted-foreground/50 transition-colors;
   }
 }
+
+/* Custom Animations */
+@keyframes swing {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+.animate-swing {
+  animation: swing 6s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-wave {
+  animation: wave 2s infinite;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+@keyframes scroll-down {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}

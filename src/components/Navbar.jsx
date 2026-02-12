@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border border-white/10 flex items-center justify-center backdrop-blur-md group-hover:border-primary/50 transition-colors">
               <span className="text-gradient font-bold text-lg">SB</span>
             </div>
-            <span className="hidden md:block font-bold text-lg tracking-wide text-foreground/90 group-hover:text-primary transition-colors">SathvikBhaskar</span>
+            <span className={`hidden md:block font-bold text-lg tracking-wide transition-colors ${scrolled ? "text-foreground/90" : "text-white/90"} group-hover:text-primary`}>SathvikBhaskar</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -44,7 +44,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+                className={`text-sm font-medium transition-colors duration-200 ${scrolled ? "text-muted-foreground hover:text-primary" : "text-neutral-300 hover:text-white"}`}
               >
                 {link.label}
               </a>
@@ -56,7 +56,7 @@ const Navbar = () => {
             <ThemeToggle />
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="text-foreground focus:outline-none"
+              className={`focus:outline-none transition-colors ${scrolled ? "text-foreground" : "text-white"}`}
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
