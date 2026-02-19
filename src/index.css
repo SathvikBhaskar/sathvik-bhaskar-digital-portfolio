@@ -6,50 +6,54 @@
 
 @layer base {
   :root {
-    /* Vibrant Dark Theme */
-    --background: 240 10% 3.9%;
-    /* Very dark grey/blue */
-    --foreground: 0 0% 98%;
+    /* Rich Dark Theme - User Palette */
 
-    --card: 240 10% 6%;
-    /* Slightly lighter than bg */
-    --card-foreground: 0 0% 98%;
+    /* Prussian Blue #000022 */
+    --background: 240 100% 6.7%;
 
-    --popover: 240 10% 6%;
-    --popover-foreground: 0 0% 98%;
+    /* Snow #FBF5F3 */
+    --foreground: 14 33% 97%;
 
-    --primary: 263.4 70% 50.4%;
-    /* Deep Vibrant Purple */
-    --primary-foreground: 210 40% 98%;
+    /* Darker shade of Prussian Blue for cards */
+    --card: 240 100% 4%;
+    --card-foreground: 14 33% 97%;
 
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 210 40% 98%;
+    --popover: 240 100% 4%;
+    --popover-foreground: 14 33% 97%;
 
-    --muted: 240 4% 16%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Amber Earth #E28413 */
+    --primary: 33 85% 48%;
+    --primary-foreground: 14 33% 97%;
 
-    --accent: 180 100% 50%;
-    /* Neon Cyan */
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 100% 10%;
+    --secondary-foreground: 14 33% 97%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --muted: 240 50% 15%;
+    --muted-foreground: 240 20% 70%;
 
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 263.4 70% 50.4%;
+    /* Raspberry #DE3C4B */
+    --accent: 355 70% 55%;
+    --accent-foreground: 14 33% 97%;
+
+    /* Intense Cherry #C42847 */
+    --destructive: 348 66% 46%;
+    --destructive-foreground: 14 33% 97%;
+
+    --border: 240 50% 15%;
+    --input: 240 50% 15%;
+    --ring: 33 85% 48%;
 
     --radius: 0.75rem;
 
-    /* Sidebar colors - keeping consistent */
-    --sidebar-background: 240 10% 3.9%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 263.4 70% 50.4%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4% 16%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 240 4% 16%;
-    --sidebar-ring: 263.4 70% 50.4%;
+    /* Sidebar colors */
+    --sidebar-background: 240 100% 6.7%;
+    --sidebar-foreground: 14 33% 97%;
+    --sidebar-primary: 33 85% 48%;
+    --sidebar-primary-foreground: 14 33% 97%;
+    --sidebar-accent: 355 70% 55%;
+    --sidebar-accent-foreground: 14 33% 97%;
+    --sidebar-border: 240 50% 15%;
+    --sidebar-ring: 33 85% 48%;
   }
 
   .light {
@@ -138,11 +142,11 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-accent;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-destructive to-accent;
   }
 
-  .text-gradient-cyan {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500;
+  .text-gradient-secondary {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-destructive;
   }
 
   .glass {
@@ -169,12 +173,12 @@
   }
 
   .dark .glass-card {
-    /* Dark Mode: Reset gradient to plain dark background */
-    @apply bg-none bg-card/40 border-white/10;
+    /* Dark Mode: Gradient background using Prussian Blue tints + clear border */
+    @apply bg-gradient-to-br from-[#0a0a2e]/90 via-[#000022]/90 to-black/90 border-white/10 shadow-2xl;
   }
 
   .dark .glass-card:hover {
-    @apply border-primary/50;
+    @apply border-primary/40 ring-1 ring-primary/40;
   }
 
   .glass-navbar {
@@ -194,7 +198,25 @@
   }
 
   .section-padding {
-    @apply py-24 md:py-32 px-6 md:px-12 lg:px-20;
+    @apply relative py-16 md:py-24 px-6 md:px-12 lg:px-20;
+  }
+
+  .section-padding::before,
+  .section-padding::after {
+    content: "";
+    @apply absolute left-1/2 -translate-x-1/2 w-full max-w-7xl h-[1px];
+    background: linear-gradient(90deg, transparent, theme('colors.primary.DEFAULT'), theme('colors.accent.DEFAULT'), transparent);
+    background-size: 200% 100%;
+    animation: borderShimmer 4s linear infinite;
+    opacity: 0.3;
+  }
+
+  .section-padding::before {
+    top: 0;
+  }
+
+  .section-padding::after {
+    bottom: 0;
   }
 
   .hover-lift {
@@ -286,4 +308,14 @@
 
 .animate-scroll-down {
   animation: scroll-down 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+@keyframes borderShimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
 }

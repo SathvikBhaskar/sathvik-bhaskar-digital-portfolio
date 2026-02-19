@@ -1,4 +1,5 @@
 import AnimatedSection from "./AnimatedSection";
+import GlowingCard from "./ui/GlowingCard";
 
 const categories = [
   {
@@ -43,7 +44,7 @@ const Skills = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
             <AnimatedSection key={cat.title} delay={i * 0.08}>
-              <div className="p-8 rounded-2xl glass-card h-full transition-all duration-300 hover:-translate-y-1">
+              <GlowingCard className="p-8 h-full glass-card hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-heading font-bold text-lg text-primary mb-6 tracking-wide">
                   {cat.title}
                 </h3>
@@ -57,7 +58,7 @@ const Skills = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </GlowingCard>
             </AnimatedSection>
           ))}
         </div>

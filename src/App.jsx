@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme" attribute="class">
+      <ThemeProvider defaultTheme="dark" enableSystem={false} storageKey="vite-ui-theme-v2" attribute="class">
         <TooltipProvider>
           {loading ? (
             <SplashScreen onComplete={() => setLoading(false)} />

@@ -22,7 +22,7 @@ const HangingIDCard = () => {
         <div className="flex flex-col items-center pt-16 px-6 h-full text-center">
 
           {/* Profile Photo */}
-          <div className="w-40 h-40 rounded-xl overflow-hidden border-4 border-white shadow-lg mb-6 bg-neutral-200 contrast-125 grayscale hover:grayscale-0 transition-all duration-500">
+          <div className="w-40 h-40 rounded-xl overflow-hidden border-4 border-white shadow-lg mb-6 bg-neutral-200 contrast-125 grayscale group-hover:grayscale-0 transition-all duration-500">
             <img
               src="/sathvik photo new-min.jpg"
               alt="Sathvik Bhaskar"
@@ -81,18 +81,18 @@ const Marquee = () => {
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden bg-white dark:bg-neutral-950 flex items-center justify-center pt-20 pb-32 transition-colors duration-500">
+    <section id="home" className="min-h-screen relative overflow-hidden bg-background flex items-center justify-center pt-20 pb-32 transition-colors duration-500">
 
-      {/* Light Mode Background Blobs */}
+      {/* Light Mode Background Blobs - hidden in dark mode */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none dark:hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-purple-200/40 blur-[100px] animate-blob"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-blue-200/40 blur-[100px] animate-blob animation-delay-2000"></div>
-        <div className="absolute top-[40%] left-[30%] w-[400px] h-[400px] rounded-full bg-pink-200/40 blur-[100px] animate-blob animation-delay-4000"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-primary/20 blur-[100px] animate-blob"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-accent/20 blur-[100px] animate-blob animation-delay-2000"></div>
+        <div className="absolute top-[40%] left-[30%] w-[400px] h-[400px] rounded-full bg-primary/20 blur-[100px] animate-blob animation-delay-4000"></div>
       </div>
 
       {/* Subtle Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white/50 dark:bg-neutral-950 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-background/50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
 
@@ -105,13 +105,13 @@ const Hero = () => {
         >
           <div className="inline-flex items-center gap-2 mb-6">
             <span className="text-2xl animate-wave">👋</span>
-            <span className="text-neutral-600 dark:text-neutral-400 font-body text-lg md:text-xl">Hello, great to have you here</span>
+            <span className="text-muted-foreground font-body text-lg md:text-xl">Hello, great to have you here</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-black text-neutral-900 dark:text-white leading-[0.9] mb-8 tracking-tight">
-            I'M A <span className="text-primary dark:text-neon-lime selection:bg-primary selection:text-white dark:selection:bg-neon-lime dark:selection:text-black">SYSTEMS</span><br />
-            <span className="text-neutral-900 dark:text-white">DEVELOPER</span> <br />
-            <span className="text-neutral-400 dark:text-neutral-500 text-4xl md:text-6xl lg:text-7xl">CRAFTING ROBUST CODE</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-foreground leading-[0.9] mb-8 tracking-tight">
+            I'M A <span className="text-primary selection:bg-primary selection:text-white">BACKEND & SYSTEMS</span><br />
+            <span className="text-foreground">DEVELOPER</span> <br />
+            <span className="text-muted-foreground text-2xl md:text-4xl lg:text-5xl">CRAFTING ROBUST CODE</span>
           </h1>
 
           <p className="text-neutral-600 dark:text-neutral-400 font-body text-lg md:text-xl max-w-xl leading-relaxed mb-10">
