@@ -73,8 +73,7 @@
     /* Adjusted for typical card radius */
     --card-width: 100%;
     /* Changed from 35vw/fixed width to 100% for responsiveness */
-    --border-width: 2px;
-    /* Slightly thinner border */
+    --border-width: 4px;
     --bg-size: 1;
     --hue: 0;
     --hue-speed: 1;
