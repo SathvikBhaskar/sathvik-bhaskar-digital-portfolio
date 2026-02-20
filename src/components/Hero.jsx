@@ -98,9 +98,9 @@ const Hero = () => {
 
         {/* Text Content */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.0, ease: [0.77, 0, 0.175, 1] }}
           className="flex flex-col items-start text-left"
         >
           <div className="inline-flex items-center gap-2 mb-6">
@@ -144,7 +144,7 @@ const Hero = () => {
         <a href="#about" className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors flex flex-col items-center gap-2 group">
           <span className="text-[10px] uppercase tracking-[0.2em] opacity-40 group-hover:opacity-100 transition-opacity">Scroll Down</span>
           <div className="w-[1px] h-12 bg-neutral-300 dark:bg-neutral-800 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-primary dark:bg-neon-lime animate-scroll-down"></div>
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-primary dark:bg-primary animate-scroll-down"></div>
           </div>
         </a>
       </motion.div>

@@ -6,42 +6,43 @@
 
 @layer base {
   :root {
-    /* Rich Dark Theme - User Palette */
+    /* Harsh Vardhan Inspired Dark Theme */
 
-    /* Prussian Blue #000022 */
-    --background: 240 100% 6.7%;
+    /* Pure Black */
+    --background: 0 0% 0%;
 
-    /* Snow #FBF5F3 */
-    --foreground: 14 33% 97%;
+    /* Pure White */
+    --foreground: 0 0% 100%;
 
-    /* Darker shade of Prussian Blue for cards */
-    --card: 240 100% 4%;
-    --card-foreground: 14 33% 97%;
+    /* Slightly lighter than black or just transparent dark grey for cards */
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 240 100% 4%;
-    --popover-foreground: 14 33% 97%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Amber Earth #E28413 */
-    --primary: 33 85% 48%;
-    --primary-foreground: 14 33% 97%;
+    /* Vibrant Cyan / Blue #0066FF */
+    --primary: 216 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 100% 10%;
-    --secondary-foreground: 14 33% 97%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 50% 15%;
-    --muted-foreground: 240 20% 70%;
+    --muted: 0 0% 10%;
+    /* Muted text #999999 */
+    --muted-foreground: 0 0% 60%;
 
-    /* Raspberry #DE3C4B */
-    --accent: 355 70% 55%;
-    --accent-foreground: 14 33% 97%;
+    /* Vibrant Cyan / Blue #0066FF */
+    --accent: 216 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    /* Intense Cherry #C42847 */
-    --destructive: 348 66% 46%;
-    --destructive-foreground: 14 33% 97%;
+    /* Intense Red for destructive */
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 50% 15%;
-    --input: 240 50% 15%;
-    --ring: 33 85% 48%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 216 100% 50%;
 
     --radius: 0.75rem;
 
@@ -57,42 +58,33 @@
   }
 
   .light {
-    --background: 210 40% 98%;
-    /* Soft cool white */
-    --foreground: 222.2 84% 4.9%;
-    /* Deep slate - High contrast */
+    --background: 40 24% 94%; /* #F3EFE9 - Cream/Beige */
+    --foreground: 0 0% 7%;    /* #121212 - Deep Black */
 
-    --card: 210 40% 99%;
-    /* Very faint blue-white tint for cards */
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;        /* #FFFFFF - Pure white for contrast */
+    --card-foreground: 0 0% 7%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 7%;
 
-    /* Optimized for Light Mode Visibility - ROYAL BLUE */
-    --primary: 221 83% 53%;
-    /* Vibrant Professional Blue (Tailwind Blue-600 ish) */
-    --primary-foreground: 210 40% 98%;
+    --primary: 6 74% 59%;     /* #E45A47 - Salmon/Red Accent */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 40 20% 90%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 210 20% 92%;
-    /* Darker muted background for visibility */
-    --muted-foreground: 215 25% 40%;
-    /* Darker gray for readable secondary text */
+    --muted: 40 20% 90%;
+    --muted-foreground: 0 0% 30%;
 
-    --accent: 199 89% 48%;
-    /* Sky Blue Accent for freshness */
-    --accent-foreground: 210 40% 98%;
+    --accent: 6 74% 59%;      /* #E45A47 - Salmon/Red Accent */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 82%;
-    /* Stronger border for definition */
-    --input: 214.3 31.8% 85%;
-    --ring: 221 83% 53%;
+    --border: 0 0% 82%;       /* #D1D1D1 - Light Grey Border */
+    --input: 0 0% 88%;
+    --ring: 6 74% 59%;
   }
 }
 
@@ -105,11 +97,9 @@
     @apply bg-background text-foreground font-body antialiased selection:bg-primary/20 selection:text-primary;
   }
 
-  /* Light Mode: Subtle shifting background for "entertainment" */
+  /* Light Mode: Solid clean background */
   .light body {
-    background: linear-gradient(-45deg, #f8fafc, #f0f9ff, #faf5ff, #fff1f2);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background: bg-background;
   }
 
   @keyframes gradientBG {
@@ -156,7 +146,7 @@
 
   .dark .glass {
     @apply bg-white/5 border-white/10;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
   }
 
   .glass-card {
@@ -173,8 +163,8 @@
   }
 
   .dark .glass-card {
-    /* Dark Mode: Gradient background using Prussian Blue tints + clear border */
-    @apply bg-gradient-to-br from-[#0a0a2e]/90 via-[#000022]/90 to-black/90 border-white/10 shadow-2xl;
+    /* Dark Mode: Muted semi-transparent grey for cards on pure black */
+    @apply bg-[rgba(187,187,187,0.05)] border-white/10 shadow-lg;
   }
 
   .dark .glass-card:hover {

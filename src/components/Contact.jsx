@@ -22,7 +22,7 @@ const Contact = () => {
             <div className="space-y-6">
               <a
                 href="mailto:vodurisathvik@gmail.com"
-                className="flex items-center gap-4 p-5 rounded-xl glass-card group hover:bg-secondary/50 dark:hover:bg-white/5"
+                className="flex items-center gap-4 p-5 rounded-xl glass-card border border-transparent dark:border-white/10 group hover:bg-secondary/50 dark:hover:bg-white/5"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mail size={20} className="text-primary" />
@@ -39,7 +39,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/sathvik-bhaskar/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 rounded-xl glass-card group hover:bg-secondary/50 dark:hover:bg-white/5"
+                className="flex items-center gap-4 p-5 rounded-xl glass-card border border-transparent dark:border-white/10 group hover:bg-secondary/50 dark:hover:bg-white/5"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Linkedin size={20} className="text-primary" />
@@ -56,7 +56,7 @@ const Contact = () => {
                 href="https://github.com/SathvikBhaskar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 rounded-xl glass-card group hover:bg-secondary/50 dark:hover:bg-white/5"
+                className="flex items-center gap-4 p-5 rounded-xl glass-card border border-transparent dark:border-white/10 group hover:bg-secondary/50 dark:hover:bg-white/5"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Github size={20} className="text-primary" />
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-5 rounded-xl glass-card">
+              <div className="flex items-center gap-4 p-5 rounded-xl glass-card border border-transparent dark:border-white/10">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                   <MapPin size={20} className="text-primary" />
                 </div>
@@ -87,13 +87,13 @@ const Contact = () => {
                 e.preventDefault();
                 window.location.href = "mailto:vodurisathvik@gmail.com";
               }}
-              className="space-y-5 p-8 rounded-2xl glass-card"
+              className="space-y-5 p-8 rounded-2xl glass-card border border-transparent dark:border-white/10"
             >
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-2 block uppercase tracking-wide">Name</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 rounded-lg bg-secondary/30 dark:bg-black/20 border border-input dark:border-white/10 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all placeholder:text-muted-foreground/50"
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/30 dark:bg-white/5 border border-input dark:border-white/10 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all placeholder:text-muted-foreground/50"
                   placeholder="Your name"
                 />
               </div>
@@ -101,7 +101,7 @@ const Contact = () => {
                 <label className="text-xs font-medium text-muted-foreground mb-2 block uppercase tracking-wide">Email</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 rounded-lg bg-secondary/30 dark:bg-black/20 border border-input dark:border-white/10 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all placeholder:text-muted-foreground/50"
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/30 dark:bg-white/5 border border-input dark:border-white/10 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all placeholder:text-muted-foreground/50"
                   placeholder="your@email.com"
                 />
               </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                 <label className="text-xs font-medium text-muted-foreground mb-2 block uppercase tracking-wide">Message</label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-secondary/30 dark:bg-black/20 border border-input dark:border-white/10 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all resize-none placeholder:text-muted-foreground/50"
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/30 dark:bg-white/5 border border-input dark:border-white/10 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all resize-none placeholder:text-muted-foreground/50"
                   placeholder="Your message..."
                 />
               </div>

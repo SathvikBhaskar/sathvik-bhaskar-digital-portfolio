@@ -2,7 +2,7 @@ import AnimatedSection from "./AnimatedSection";
 
 const About = () => {
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding bg-white dark:bg-card">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <span className="text-sm font-body tracking-widest uppercase text-primary mb-4 block">
@@ -16,17 +16,17 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <AnimatedSection delay={0.1}>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-              I'm a backend-focused systems developer with an Electronics and Computer Engineering 
-              background. My foundation lies in low-level and hardware design, giving me a unique 
+              I'm a backend-focused systems developer with an Electronics and Computer Engineering
+              background. My foundation lies in low-level and hardware design, giving me a unique
               perspective on building reliable, performance-aware systems.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-              My research internship at the Centre for Nanoelectronics and VLSI Design (CNVD), 
-              VIT Chennai focused on post-quantum cryptography hardware — implementing NTT 
-              modules, modular arithmetic units, and cryptographic pipeline optimizations in Verilog. 
+              My research internship at the Centre for Nanoelectronics and VLSI Design (CNVD),
+              VIT Chennai focused on post-quantum cryptography hardware — implementing NTT
+              modules, modular arithmetic units, and cryptographic pipeline optimizations in Verilog.
               I also bring supporting experience in backend systems development and applied machine learning.
             </p>
           </AnimatedSection>

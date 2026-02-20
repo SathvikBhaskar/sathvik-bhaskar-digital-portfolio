@@ -21,7 +21,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="section-padding">
+    <section id="services" className="section-padding bg-white dark:bg-card">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <span className="text-sm font-body tracking-widest uppercase text-primary mb-4 block">
