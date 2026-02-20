@@ -24,7 +24,7 @@ const HangingIDCard = () => {
           {/* Profile Photo */}
           <div className="w-40 h-40 rounded-xl overflow-hidden border-4 border-white shadow-lg mb-6 bg-neutral-200 contrast-125 grayscale group-hover:grayscale-0 transition-all duration-500">
             <img
-              src="/sathvik photo new-min.jpg"
+              src="./sathvik photo new-min.jpg"
               alt="Sathvik Bhaskar"
               className="w-full h-full object-cover"
             />

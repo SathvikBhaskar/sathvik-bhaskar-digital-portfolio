@@ -163,8 +163,8 @@
   }
 
   .dark .glass-card {
-    /* Dark Mode: Muted semi-transparent grey for cards on pure black */
-    @apply bg-[rgba(187,187,187,0.05)] border-white/10 shadow-lg;
+    /* Dark Mode: Gradient background using Prussian Blue tints + clear border */
+    @apply bg-gradient-to-br from-[#0a0a2e]/90 via-[#000022]/90 to-black/90 border-white/10 shadow-2xl;
   }
 
   .dark .glass-card:hover {
